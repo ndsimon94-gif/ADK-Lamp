@@ -1,5 +1,6 @@
 "use client";
 
+import { useSearchParams } from "next/navigation";
 import { FormEvent, useState } from "react";
 import { CONTACT_EMAIL } from "@/lib/nav";
 
@@ -16,7 +17,9 @@ const REASONS = [
   "Other",
 ];
 
-export function ContactForm({ initialReason }: { initialReason?: string }) {
+export function ContactForm() {
+  const searchParams = useSearchParams();
+  const initialReason = searchParams.get("reason");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");

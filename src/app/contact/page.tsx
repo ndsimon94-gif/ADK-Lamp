@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { ContactForm } from "@/components/contact-form";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { PageHero } from "@/components/page-hero";
@@ -11,13 +12,7 @@ export const metadata: Metadata = {
     "Reach ADK LAMP to attend a gathering, ask about retreat, request prayer, discuss a ceremony, explore a partnership, or learn more.",
 };
 
-type ContactPageProps = {
-  searchParams: Promise<{ reason?: string }>;
-};
-
-export default async function ContactPage({ searchParams }: ContactPageProps) {
-  const { reason } = await searchParams;
-
+export default function ContactPage() {
   return (
     <>
       <PageHero
@@ -68,7 +63,9 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           </div>
 
           <div>
-            <ContactForm initialReason={reason} />
+            <Suspense fallback={null}>
+              <ContactForm />
+            </Suspense>
           </div>
         </div>
       </Section>

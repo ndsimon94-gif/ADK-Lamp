@@ -85,6 +85,44 @@ stand-ins:
 
 ## Deploying
 
-This is a standard Next.js app — deploy to [Vercel](https://vercel.com),
-Netlify, or any Node host. No environment variables are required for the
-current feature set.
+The site is configured as a **static export** (`output: "export"` in
+`next.config.ts`) — `npm run build` produces plain HTML/CSS/JS in `out/`
+with no Node.js server required. That means it can be hosted anywhere,
+including traditional shared hosting like SiteGround, not just
+Vercel/Netlify.
+
+### Deploying to SiteGround (adklamp.com)
+
+1. On your machine (or any machine with Node installed):
+   ```bash
+   git clone https://github.com/ndsimon94-gif/ADK-Lamp.git
+   cd ADK-Lamp
+   npm install
+   npm run build
+   ```
+   This creates an `out/` folder containing the entire built site.
+2. In SiteGround **Site Tools** → **Site** → **File Manager** (or connect
+   via SFTP under **Site** → **SFTP Accounts**), open the document root for
+   `adklamp.com` — usually `public_html/` (or
+   `public_html/adklamp.com/` if it's an addon domain).
+3. Upload the **contents** of `out/` (not the `out` folder itself) into
+   that document root, so `index.html` ends up directly at
+   `public_html/index.html`.
+4. If `adklamp.com` isn't already pointed at SiteGround, add it under
+   **Site Tools** → **Site** → **Domains**, and update the domain's
+   nameservers/DNS at your registrar to SiteGround's (SiteGround shows the
+   exact records under that same screen). SiteGround also offers a free
+   SSL certificate (Let's Encrypt) — enable it under **Security** → **SSL
+   Manager** once the domain resolves.
+5. Re-deploy future changes the same way: `npm run build`, then re-upload
+   the contents of `out/` (overwriting existing files).
+
+No Node.js hosting, database, or environment variables are needed on
+SiteGround's side — it's just static files.
+
+### Deploying to Vercel/Netlify instead
+
+Both platforms detect `output: "export"` automatically — connect the
+GitHub repo and deploy with no configuration. This gives free HTTPS,
+instant redeploys on every push, and preview URLs for branches — worth
+considering even if the live domain stays on SiteGround.
