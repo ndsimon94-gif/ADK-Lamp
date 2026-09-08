@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ButtonLink } from "@/components/button-link";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { PhotoFrame } from "@/components/photo-frame";
@@ -12,14 +11,6 @@ export default function Home() {
       <section className="relative overflow-hidden bg-cream">
         <div className="mx-auto grid max-w-5xl gap-12 px-6 py-20 sm:py-28 lg:grid-cols-2 lg:items-center lg:py-32">
           <div>
-            <Image
-              src="/logo.png"
-              alt="ADK LAMP"
-              width={413}
-              height={364}
-              className="mb-8 h-32 w-auto sm:h-40"
-              priority
-            />
             <p className="mb-4 font-body text-sm uppercase tracking-[0.2em] text-maroon">
               A Non-Denominational Church &amp; Retreat Center
             </p>
