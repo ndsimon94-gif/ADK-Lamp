@@ -15,7 +15,7 @@ const toneClasses: Record<NonNullable<SectionProps["tone"]>, string> = {
 
 export function Section({ children, className = "", tone = "cream", id }: SectionProps) {
   return (
-    <section id={id} className={`${toneClasses[tone]} ${className}`}>
+    <section id={id} className={`scroll-mt-24 ${toneClasses[tone]} ${className}`}>
       <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20 lg:py-24">{children}</div>
     </section>
   );
