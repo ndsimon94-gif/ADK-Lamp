@@ -154,11 +154,11 @@ export default function GatherPage() {
           </p>
           <div className="mt-8">
             <ButtonLink
-              href="/contact"
+              href="/coaching"
               variant="ghost"
               className="!border-cream !text-cream hover:!bg-cream hover:!text-maroon"
             >
-              Contact Davis
+              Learn More
             </ButtonLink>
           </div>
         </div>

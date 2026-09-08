@@ -193,6 +193,24 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* Work with Davis */}
+      <Section>
+        <div className="mx-auto max-w-2xl text-center">
+          <Eyebrow>Individual Coaching</Eyebrow>
+          <SectionHeading className="mx-auto">Work One-on-One With Davis</SectionHeading>
+          <p className="mt-6 font-body leading-relaxed text-ink/85">
+            Davis separately offers individual Dharma and life coaching for people
+            seeking more personalized support with contemplative practice, spiritual
+            development, life direction, and integrating practice with everyday life.
+          </p>
+          <div className="mt-8">
+            <ButtonLink href="/coaching" variant="secondary">
+              Learn More
+            </ButtonLink>
+          </div>
+        </div>
+      </Section>
+
       {/* Stay connected */}
       <Section tone="alt" id="stay-connected">
         <div className="mx-auto max-w-xl text-center">

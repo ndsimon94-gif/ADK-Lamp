@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Suspense } from "react";
 import { ContactForm } from "@/components/contact-form";
 import { NewsletterForm } from "@/components/newsletter-form";
@@ -49,6 +50,12 @@ export default function ContactPage() {
                 Individual coaching is separate from ADK LAMP programming and
                 donations.
               </p>
+              <Link
+                href="/coaching"
+                className="mt-3 inline-block font-body text-sm text-maroon underline underline-offset-4"
+              >
+                Learn more about working with Davis
+              </Link>
             </div>
 
             <div className="mt-10 border-t border-maroon/15 pt-8">
