@@ -57,38 +57,54 @@ export default function AboutPage() {
       <PageHero eyebrow="About" title="About ADK LAMP" />
 
       <Section>
-        <div className="mx-auto max-w-2xl">
-          <p className="font-body text-lg leading-relaxed text-ink/85">
-            ADK Loving Awareness Meditation Project grew from a simple aspiration: to
-            help make deep contemplative practice and retreat more accessible while
-            creating a community rooted in loving awareness, compassion, wisdom,
-            service, and connection.
-          </p>
-          <p className="mt-6 font-display text-xl italic text-maroon">
-            We are intentionally non-denominational.
-          </p>
-          <p className="mt-6 font-body leading-relaxed text-ink/85">
-            People from all religious traditions and spiritual backgrounds, as well as
-            those without a religious affiliation, are welcome.
-          </p>
-          <p className="mt-4 font-body leading-relaxed text-ink/85">
-            At the same time, we believe openness does not require abandoning
-            tradition. Authentic spiritual traditions can be practiced and preserved
-            without being imposed on others.
-          </p>
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p className="font-body text-lg leading-relaxed text-ink/85">
+              ADK Loving Awareness Meditation Project grew from a simple aspiration:
+              to help make deep contemplative practice and retreat more accessible
+              while creating a community rooted in loving awareness, compassion,
+              wisdom, service, and connection.
+            </p>
+            <p className="mt-6 font-display text-xl italic text-maroon">
+              We are intentionally non-denominational.
+            </p>
+            <p className="mt-6 font-body leading-relaxed text-ink/85">
+              People from all religious traditions and spiritual backgrounds, as well
+              as those without a religious affiliation, are welcome.
+            </p>
+            <p className="mt-4 font-body leading-relaxed text-ink/85">
+              At the same time, we believe openness does not require abandoning
+              tradition. Authentic spiritual traditions can be practiced and
+              preserved without being imposed on others.
+            </p>
+          </div>
+          <PhotoFrame
+            src="/images/founder-portrait.jpg"
+            alt="Davis Trachte seated in meditation"
+            aspect="aspect-[4/5]"
+            rounded
+          />
         </div>
       </Section>
 
       {/* Heart-based approach */}
       <Section tone="alt">
-        <div className="mx-auto max-w-2xl text-center">
-          <Eyebrow>Our Heart-Based Approach</Eyebrow>
-          <SectionHeading className="mx-auto">The cultivation of loving awareness</SectionHeading>
-          <p className="mt-6 font-body leading-relaxed text-ink/85">
-            At the center of ADK LAMP is the cultivation of loving awareness — learning
-            to meet ourselves, other people, and the world with both attention and
-            care.
-          </p>
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <Eyebrow>Our Heart-Based Approach</Eyebrow>
+            <SectionHeading>The cultivation of loving awareness</SectionHeading>
+            <p className="mt-6 font-body leading-relaxed text-ink/85">
+              At the center of ADK LAMP is the cultivation of loving awareness —
+              learning to meet ourselves, other people, and the world with both
+              attention and care.
+            </p>
+          </div>
+          <PhotoFrame
+            src="/images/founder-service.jpg"
+            alt="Davis helping with renovation work alongside a Buddhist teacher"
+            aspect="aspect-[4/5]"
+            rounded
+          />
         </div>
 
         <div className="mt-14 grid gap-x-8 gap-y-10 sm:grid-cols-2">
@@ -133,18 +149,11 @@ export default function AboutPage() {
               one another with genuine respect.
             </p>
           </div>
-          <div className="flex flex-col gap-4">
-            <PhotoFrame
-              src="/images/tradition-mandala.jpg"
-              alt="Davis constructing a sand mandala with his teacher"
-              rounded
-            />
-            <PhotoFrame
-              src="/images/tradition-shrine.jpg"
-              alt="Davis and his teacher receiving a ceremonial khata scarf in a shrine room"
-              rounded
-            />
-          </div>
+          <PhotoFrame
+            src="/images/tradition-mandala.jpg"
+            alt="Davis constructing a sand mandala with his teacher"
+            rounded
+          />
         </div>
       </Section>
 
@@ -152,20 +161,12 @@ export default function AboutPage() {
       <Section tone="alt">
         <Eyebrow>Founder</Eyebrow>
         <div className="grid gap-12 lg:grid-cols-[280px_1fr] lg:items-start">
-          <div className="flex flex-col gap-4">
-            <PhotoFrame
-              src="/images/founder-portrait.jpg"
-              alt="Davis Trachte"
-              aspect="aspect-[4/5]"
-              rounded
-            />
-            <PhotoFrame
-              src="/images/founder-service.jpg"
-              alt="Davis helping with renovation work alongside a Buddhist teacher"
-              aspect="aspect-[4/5]"
-              rounded
-            />
-          </div>
+          <PhotoFrame
+            src="/images/tradition-shrine.jpg"
+            alt="Davis and his teacher receiving a ceremonial khata scarf in a shrine room"
+            aspect="aspect-[4/3]"
+            rounded
+          />
           <div>
             <h2 className="font-display text-3xl text-navy">Davis Trachte</h2>
             <p className="mt-1 font-body text-sm uppercase tracking-[0.15em] text-maroon">
