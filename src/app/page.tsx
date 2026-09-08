@@ -38,9 +38,10 @@ export default function Home() {
               </ButtonLink>
             </div>
           </div>
-          <PhotoPlaceholder
-            label="Adirondack forest &amp; mountains"
-            aspect="aspect-[5/4]"
+          <PhotoFrame
+            src="/images/founder-portrait.jpg"
+            alt="Davis Trachte seated in meditation"
+            aspect="aspect-[4/5]"
             rounded
           />
         </div>
