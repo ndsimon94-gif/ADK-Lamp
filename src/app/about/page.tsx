@@ -124,9 +124,8 @@ export default function AboutPage() {
             </p>
           </div>
           <PhotoFrame
-            src="/images/founder-service.jpg"
-            alt="Davis helping with renovation work alongside a Buddhist teacher"
-            aspect="aspect-[4/5]"
+            src="/images/home-welcome-beach.jpg"
+            alt="Davis Trachte and his teacher smiling on a lakeshore"
             rounded
           />
         </div>
