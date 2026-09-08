@@ -9,7 +9,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-cream">
-        <div className="mx-auto grid max-w-5xl gap-12 px-6 py-20 sm:py-28 lg:grid-cols-2 lg:items-center lg:py-32">
+        <div className="mx-auto grid max-w-5xl gap-12 px-6 pt-10 pb-20 sm:pt-14 sm:pb-28 lg:grid-cols-2 lg:items-center lg:pt-16 lg:pb-32">
           <div>
             <p className="mb-4 font-body text-sm uppercase tracking-[0.2em] text-maroon">
               A Non-Denominational Church &amp; Retreat Center
@@ -27,11 +27,13 @@ export default function Home() {
               as well as those who belong to no particular tradition at all.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <ButtonLink href="/about">About Us</ButtonLink>
+              <ButtonLink href="/about" variant="secondary">
+                About Us
+              </ButtonLink>
               <ButtonLink href="/gather" variant="secondary">
                 Get Involved
               </ButtonLink>
-              <ButtonLink href="/support" variant="ghost">
+              <ButtonLink href="/support" variant="secondary">
                 Donate
               </ButtonLink>
             </div>

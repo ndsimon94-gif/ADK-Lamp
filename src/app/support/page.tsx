@@ -83,9 +83,6 @@ export default function SupportPage() {
               Donate with Venmo
             </ButtonLink>
           </div>
-          <p className="mt-4 font-body text-xs text-cream/60">
-            PayPal link is not yet connected — see the project README.
-          </p>
         </div>
       </Section>
 
