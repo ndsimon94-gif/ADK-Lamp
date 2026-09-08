@@ -18,7 +18,6 @@ const FOUNDING_MEMBERS = [
   { name: "Nate Trachte" },
   { name: "Alex Morton" },
   { name: "Wynde Kate" },
-  { name: "Sarah Workneh" },
 ];
 
 const MEMBERS_WITH_BIO = FOUNDING_MEMBERS.filter((m) => m.bio);
