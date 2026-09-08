@@ -9,6 +9,14 @@ export const metadata: Metadata = {
     "ADK LAMP grew from a simple aspiration: to help make deep contemplative practice and retreat more accessible while creating a community rooted in loving awareness.",
 };
 
+const FOUNDING_MEMBERS = [
+  "Nick Simon",
+  "Nate Trachte",
+  "Alex Morton",
+  "Wynde Kate",
+  "Sarah Workneh",
+];
+
 const VALUES = [
   {
     name: "Loving Awareness",
@@ -164,8 +172,17 @@ export default function AboutPage() {
               Founder &amp; Spiritual Director
             </p>
             <p className="mt-6 font-body leading-relaxed text-ink/85">
-              Davis Trachte has been a student and practitioner of Tibetan Buddhism
-              since 2013, primarily within the Nyingma and Kagyu traditions.
+              Davis Trachte was born in Goshen, New York, in July 1993 and grew up
+              with a deep connection to the mountains and outdoor life of New York
+              State. During middle school in New Paltz, he volunteered with his
+              family to help maintain nature trails on the Mohonk Preserve, an early
+              experience that helped establish a lifelong appreciation for
+              wilderness, service, and the importance of caring for the natural
+              world.
+            </p>
+            <p className="mt-4 font-body leading-relaxed text-ink/85">
+              Davis has been a student and practitioner of Tibetan Buddhism since
+              2013, primarily within the Nyingma and Kagyu traditions.
             </p>
             <p className="mt-4 font-body leading-relaxed text-ink/85">
               He received a Bachelor&rsquo;s degree in Tibetan Language and Buddhist
@@ -190,6 +207,24 @@ export default function AboutPage() {
               expression in compassionate service.
             </p>
           </div>
+        </div>
+      </Section>
+
+      {/* Founding members */}
+      <Section>
+        <Eyebrow>Founding Members</Eyebrow>
+        <SectionHeading>Building ADK LAMP together</SectionHeading>
+        <p className="mt-6 max-w-2xl font-body leading-relaxed text-ink/85">
+          ADK LAMP is being built with the help of a small circle of founding
+          members. Full bios are coming soon.
+        </p>
+        <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-3">
+          {FOUNDING_MEMBERS.map((name) => (
+            <div key={name} className="border-l-2 border-maroon pl-4">
+              <p className="font-display text-lg text-navy">{name}</p>
+              <p className="font-body text-sm text-ink/60">Founding Member</p>
+            </div>
+          ))}
         </div>
       </Section>
     </>
