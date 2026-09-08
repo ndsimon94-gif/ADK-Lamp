@@ -46,7 +46,7 @@ export function Header() {
           ))}
           <Link
             href="/support"
-            className="rounded-sm border border-maroon bg-maroon px-4 py-2 text-sm uppercase tracking-[0.08em] text-cream transition-colors hover:bg-maroon-dark"
+            className="rounded-sm border border-maroon px-4 py-2 text-sm tracking-[0.04em] text-maroon transition-colors hover:bg-maroon hover:text-cream"
           >
             Donate
           </Link>
@@ -86,7 +86,7 @@ export function Header() {
           <Link
             href="/support"
             onClick={() => setOpen(false)}
-            className="mt-4 rounded-sm border border-maroon bg-maroon px-4 py-3 text-center text-sm uppercase tracking-[0.08em] text-cream"
+            className="mt-4 rounded-sm border border-maroon px-4 py-3 text-center text-sm tracking-[0.04em] text-maroon"
           >
             Donate
           </Link>

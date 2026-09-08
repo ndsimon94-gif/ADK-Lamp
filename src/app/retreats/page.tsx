@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/button-link";
 import { PageHero } from "@/components/page-hero";
-import { PhotoPlaceholder } from "@/components/photo-placeholder";
+import { PhotoFrame } from "@/components/photo-frame";
 import { Eyebrow, Section, SectionHeading } from "@/components/section";
 
 export const metadata: Metadata = {
@@ -61,7 +61,12 @@ export default function RetreatsPage() {
 
       <Section>
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <PhotoPlaceholder label="Retreat cabin among trees" rounded />
+          <PhotoFrame
+            src="/images/vision-land.jpg"
+            alt="A cairn atop an Adirondack summit, overlooking forested peaks"
+            aspect="aspect-[4/5]"
+            rounded
+          />
           <div>
             <Eyebrow>Retreat Across Traditions</Eyebrow>
             <SectionHeading>Not one universal form of retreat</SectionHeading>

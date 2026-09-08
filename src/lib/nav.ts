@@ -3,7 +3,6 @@ export const NAV_LINKS = [
   { href: "/gather", label: "Gather & Practice" },
   { href: "/retreats", label: "Retreats" },
   { href: "/youth", label: "Youth" },
-  { href: "/vision", label: "Our Vision" },
   { href: "/coaching", label: "Coaching" },
   { href: "/contact", label: "Contact" },
 ] as const;

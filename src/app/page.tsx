@@ -152,7 +152,7 @@ export default function Home() {
               It is to create a place for practice.
             </p>
             <div className="mt-8">
-              <ButtonLink href="/vision" variant="secondary">
+              <ButtonLink href="/about#vision" variant="secondary">
                 Explore Our Vision
               </ButtonLink>
             </div>

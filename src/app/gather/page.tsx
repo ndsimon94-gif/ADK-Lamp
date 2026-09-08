@@ -49,6 +49,11 @@ export default function GatherPage() {
               Prior meditation experience is not required unless an individual program
               specifically states otherwise.
             </p>
+            <div className="mt-8">
+              <ButtonLink href="/contact" variant="secondary">
+                Contact Us
+              </ButtonLink>
+            </div>
           </div>
           <PhotoFrame
             src="/images/gather-group.jpg"
