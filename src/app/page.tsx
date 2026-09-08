@@ -1,6 +1,7 @@
 import { ButtonLink } from "@/components/button-link";
 import { LogoMark } from "@/components/logo-mark";
 import { NewsletterForm } from "@/components/newsletter-form";
+import { PhotoFrame } from "@/components/photo-frame";
 import { PhotoPlaceholder } from "@/components/photo-placeholder";
 import { Eyebrow, Section, SectionHeading } from "@/components/section";
 
@@ -97,7 +98,11 @@ export default function Home() {
               requiring everyone to follow the same path.
             </p>
           </div>
-          <PhotoPlaceholder label="Community gathering" rounded />
+          <PhotoFrame
+            src="/images/home-welcome-beach.jpg"
+            alt="Davis Trachte and his teacher smiling on a lakeshore"
+            rounded
+          />
         </div>
       </Section>
 
@@ -128,7 +133,12 @@ export default function Home() {
       {/* Home in Adirondacks */}
       <Section>
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <PhotoPlaceholder label="Land in the Adirondacks" rounded className="lg:order-2" />
+          <PhotoFrame
+            src="/images/home-land-adirondacks.jpg"
+            alt="A newly built wooden platform on forested land"
+            rounded
+            className="lg:order-2"
+          />
           <div className="lg:order-1">
             <Eyebrow>A Home in the Adirondacks</Eyebrow>
             <SectionHeading>A simple place, surrounded by quiet</SectionHeading>

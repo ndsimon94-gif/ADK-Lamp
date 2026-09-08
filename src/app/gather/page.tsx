@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/button-link";
 import { PageHero } from "@/components/page-hero";
-import { PhotoPlaceholder } from "@/components/photo-placeholder";
+import { PhotoFrame } from "@/components/photo-frame";
 import { Eyebrow, Section, SectionHeading } from "@/components/section";
 
 export const metadata: Metadata = {
@@ -50,7 +50,11 @@ export default function GatherPage() {
               specifically states otherwise.
             </p>
           </div>
-          <PhotoPlaceholder label="Group meditation" rounded />
+          <PhotoFrame
+            src="/images/gather-group.jpg"
+            alt="A teacher and community members gathered on a hillside"
+            rounded
+          />
         </div>
       </Section>
 
@@ -118,6 +122,13 @@ export default function GatherPage() {
               Rather than maintaining a fixed menu of ceremonies, we prefer to begin
               with a conversation.
             </p>
+            <PhotoFrame
+              src="/images/gather-ceremony.jpg"
+              alt="An outdoor Tibetan Buddhist ceremony"
+              aspect="aspect-[16/10]"
+              rounded
+              className="mt-6"
+            />
             <div className="mt-8">
               <ButtonLink href="/contact?reason=Ceremony" variant="secondary">
                 Inquire About a Ceremony

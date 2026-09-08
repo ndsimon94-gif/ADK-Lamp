@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/button-link";
 import { PageHero } from "@/components/page-hero";
+import { PhotoFrame } from "@/components/photo-frame";
 import { PhotoPlaceholder } from "@/components/photo-placeholder";
 import { Eyebrow, Section, SectionHeading } from "@/components/section";
 
@@ -59,22 +60,29 @@ export default function YouthPage() {
       </Section>
 
       <Section tone="alt">
-        <div className="mx-auto max-w-2xl">
-          <Eyebrow>Why Nature?</Eyebrow>
-          <SectionHeading>Paying attention differently</SectionHeading>
-          <p className="mt-6 font-body leading-relaxed text-ink/85">
-            The natural world gives us opportunities to pay attention differently.
-          </p>
-          <p className="mt-4 font-body leading-relaxed text-ink/85">
-            Walking quietly through a forest, sitting beside water, noticing sound and
-            sensation, breathing, and simply being present can create space for young
-            people to experience themselves and their surroundings without the
-            constant demands of everyday life.
-          </p>
-          <p className="mt-4 font-body leading-relaxed text-ink/85">
-            Our aim is simple: to make these opportunities available to young people
-            who may otherwise have little access to them.
-          </p>
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <Eyebrow>Why Nature?</Eyebrow>
+            <SectionHeading>Paying attention differently</SectionHeading>
+            <p className="mt-6 font-body leading-relaxed text-ink/85">
+              The natural world gives us opportunities to pay attention differently.
+            </p>
+            <p className="mt-4 font-body leading-relaxed text-ink/85">
+              Walking quietly through a forest, sitting beside water, noticing sound
+              and sensation, breathing, and simply being present can create space for
+              young people to experience themselves and their surroundings without the
+              constant demands of everyday life.
+            </p>
+            <p className="mt-4 font-body leading-relaxed text-ink/85">
+              Our aim is simple: to make these opportunities available to young people
+              who may otherwise have little access to them.
+            </p>
+          </div>
+          <PhotoFrame
+            src="/images/youth-nature-flower.jpg"
+            alt="A hand reaching toward a hibiscus flower"
+            rounded
+          />
         </div>
       </Section>
 

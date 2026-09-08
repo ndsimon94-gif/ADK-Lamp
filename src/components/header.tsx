@@ -1,9 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { LogoMark } from "./logo-mark";
 import { NAV_LINKS, SITE_SHORT } from "@/lib/nav";
 
 export function Header() {
@@ -18,7 +18,14 @@ export function Header() {
           className="flex items-center gap-3 font-display text-lg text-navy"
           onClick={() => setOpen(false)}
         >
-          <LogoMark className="h-9 w-9 shrink-0 text-maroon" />
+          <Image
+            src="/logo.png"
+            alt="ADK LAMP"
+            width={72}
+            height={67}
+            className="h-9 w-auto shrink-0 rounded-md"
+            priority
+          />
           <span className="leading-tight tracking-[0.02em]">
             ADK <span className="text-maroon">Loving Awareness</span>
             <br className="hidden sm:block" /> Meditation Project

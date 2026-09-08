@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PhotoPlaceholder } from "@/components/photo-placeholder";
+import { PhotoFrame } from "@/components/photo-frame";
 import { Eyebrow, Section, SectionHeading } from "@/components/section";
 import { PageHero } from "@/components/page-hero";
 
@@ -97,32 +97,39 @@ export default function AboutPage() {
 
       {/* Tradition without exclusivity */}
       <Section>
-        <div className="mx-auto max-w-2xl">
-          <Eyebrow>Tradition Without Exclusivity</Eyebrow>
-          <SectionHeading>Rooted in a living lineage</SectionHeading>
-          <p className="mt-6 font-body leading-relaxed text-ink/85">
-            Tibetan Buddhism has a particular place in the roots of ADK LAMP because of
-            the training and practice background of its founder.
-          </p>
-          <p className="mt-4 font-body leading-relaxed text-ink/85">
-            Traditional Tibetan Buddhist teachings, meditation, prayer, and ceremonies
-            may be offered for those who wish to engage with them.
-          </p>
-          <p className="mt-4 font-body leading-relaxed text-ink/85">
-            The Barway Dorje Terma tradition has particular importance within these
-            roots, and ADK LAMP hopes to help preserve opportunities for sincere
-            practitioners to encounter and practice this tradition authentically and
-            under appropriate guidance.
-          </p>
-          <p className="mt-4 font-body leading-relaxed text-ink/85">
-            Participation in Tibetan Buddhist practice is never a requirement for
-            belonging to the wider ADK LAMP community.
-          </p>
-          <p className="mt-4 font-body leading-relaxed text-ink/85">
-            Our long-term vision is to create a place where different contemplative and
-            spiritual traditions can be practiced with integrity while meeting one
-            another with genuine respect.
-          </p>
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <Eyebrow>Tradition Without Exclusivity</Eyebrow>
+            <SectionHeading>Rooted in a living lineage</SectionHeading>
+            <p className="mt-6 font-body leading-relaxed text-ink/85">
+              Tibetan Buddhism has a particular place in the roots of ADK LAMP because
+              of the training and practice background of its founder.
+            </p>
+            <p className="mt-4 font-body leading-relaxed text-ink/85">
+              Traditional Tibetan Buddhist teachings, meditation, prayer, and
+              ceremonies may be offered for those who wish to engage with them.
+            </p>
+            <p className="mt-4 font-body leading-relaxed text-ink/85">
+              The Barway Dorje Terma tradition has particular importance within these
+              roots, and ADK LAMP hopes to help preserve opportunities for sincere
+              practitioners to encounter and practice this tradition authentically and
+              under appropriate guidance.
+            </p>
+            <p className="mt-4 font-body leading-relaxed text-ink/85">
+              Participation in Tibetan Buddhist practice is never a requirement for
+              belonging to the wider ADK LAMP community.
+            </p>
+            <p className="mt-4 font-body leading-relaxed text-ink/85">
+              Our long-term vision is to create a place where different contemplative
+              and spiritual traditions can be practiced with integrity while meeting
+              one another with genuine respect.
+            </p>
+          </div>
+          <PhotoFrame
+            src="/images/tradition-mandala.jpg"
+            alt="Davis constructing a sand mandala with his teacher"
+            rounded
+          />
         </div>
       </Section>
 
@@ -130,7 +137,20 @@ export default function AboutPage() {
       <Section tone="alt">
         <Eyebrow>Founder</Eyebrow>
         <div className="grid gap-12 lg:grid-cols-[280px_1fr] lg:items-start">
-          <PhotoPlaceholder label="Davis Trachte" aspect="aspect-[4/5]" rounded />
+          <div className="flex flex-col gap-4">
+            <PhotoFrame
+              src="/images/founder-portrait.jpg"
+              alt="Davis Trachte"
+              aspect="aspect-[4/5]"
+              rounded
+            />
+            <PhotoFrame
+              src="/images/founder-service.jpg"
+              alt="Davis helping with renovation work alongside a Buddhist teacher"
+              aspect="aspect-[4/5]"
+              rounded
+            />
+          </div>
           <div>
             <h2 className="font-display text-3xl text-navy">Davis Trachte</h2>
             <p className="mt-1 font-body text-sm uppercase tracking-[0.15em] text-maroon">

@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import { LogoMark } from "./logo-mark";
 import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, NAV_LINKS } from "@/lib/nav";
 
 const FOOTER_LINKS = [{ href: "/", label: "Home" }, ...NAV_LINKS, { href: "/support", label: "Donate" }];
@@ -11,7 +11,9 @@ export function Footer() {
         <div className="flex flex-col gap-10 sm:flex-row sm:justify-between">
           <div className="max-w-sm">
             <div className="mb-4 flex items-center gap-3">
-              <LogoMark className="h-8 w-8 shrink-0" color="#f4ecdc" />
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-cream p-1">
+                <Image src="/logo.png" alt="ADK LAMP" width={72} height={67} className="h-full w-auto rounded-full" />
+              </span>
               <span className="font-display text-lg">ADK LAMP</span>
             </div>
             <p className="font-body text-sm leading-relaxed text-cream/75">
