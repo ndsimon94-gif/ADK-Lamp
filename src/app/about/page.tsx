@@ -125,11 +125,18 @@ export default function AboutPage() {
               one another with genuine respect.
             </p>
           </div>
-          <PhotoFrame
-            src="/images/tradition-mandala.jpg"
-            alt="Davis constructing a sand mandala with his teacher"
-            rounded
-          />
+          <div className="flex flex-col gap-4">
+            <PhotoFrame
+              src="/images/tradition-mandala.jpg"
+              alt="Davis constructing a sand mandala with his teacher"
+              rounded
+            />
+            <PhotoFrame
+              src="/images/tradition-shrine.jpg"
+              alt="Davis and his teacher receiving a ceremonial khata scarf in a shrine room"
+              rounded
+            />
+          </div>
         </div>
       </Section>
 

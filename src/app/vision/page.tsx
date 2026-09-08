@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/button-link";
 import { PageHero } from "@/components/page-hero";
+import { PhotoFrame } from "@/components/photo-frame";
 import { Section } from "@/components/section";
 
 export const metadata: Metadata = {
@@ -40,6 +41,16 @@ export default function VisionPage() {
         title="A Home in the Adirondacks"
         description="We are working toward something simple: a place for practice. Our long-term goal is to establish a permanent home for ADK Loving Awareness Meditation Project in the Adirondacks — a place where nature, silence, spiritual practice, service, and community can meet. We expect this vision to unfold gradually over many years."
       />
+
+      <Section>
+        <PhotoFrame
+          src="/images/vision-land.jpg"
+          alt="A cairn atop an Adirondack summit, overlooking forested peaks"
+          aspect="aspect-[21/9]"
+          rounded
+          className="mx-auto max-w-3xl"
+        />
+      </Section>
 
       <Section>
         <div className="mx-auto max-w-3xl">
