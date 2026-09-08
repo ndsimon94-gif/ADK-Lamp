@@ -47,11 +47,6 @@ export function Footer() {
                 </a>
               </li>
               <li className="pt-2">
-                <Link href="/contact#prayer" className="hover:text-cream">
-                  Prayer Request
-                </Link>
-              </li>
-              <li>
                 <Link href="/contact#connected" className="hover:text-cream">
                   Stay Connected
                 </Link>

@@ -82,7 +82,6 @@ export default function GatherPage() {
         <div className="grid gap-x-12 gap-y-16 md:grid-cols-2">
           <div>
             <Eyebrow>Prayer &amp; Spiritual Support</Eyebrow>
-            <SectionHeading>Held in prayer and awareness</SectionHeading>
             <p className="mt-6 font-body leading-relaxed text-ink/85">
               There are times when we simply want to know that someone is holding us in
               prayer, contemplation, or compassionate awareness.
@@ -100,7 +99,7 @@ export default function GatherPage() {
             </p>
             <div className="mt-8">
               <ButtonLink href="/contact#prayer" variant="secondary">
-                Request Prayer or Spiritual Support
+                Contact Us
               </ButtonLink>
             </div>
           </div>

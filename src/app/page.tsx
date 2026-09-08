@@ -109,9 +109,6 @@ export default function Home() {
       <Section tone="alt">
         <div className="mx-auto max-w-2xl text-center">
           <Eyebrow>Gather &amp; Practice</Eyebrow>
-          <SectionHeading className="mx-auto">
-            Meditation, teaching, prayer, and community
-          </SectionHeading>
           <p className="mt-6 font-body leading-relaxed text-ink/85">
             ADK LAMP offers and hosts meditation, spiritual teachings, community
             gatherings, prayer, retreats, ceremonies, visiting teachers, and online

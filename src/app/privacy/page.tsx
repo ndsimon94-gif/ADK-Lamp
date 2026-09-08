@@ -19,13 +19,9 @@ export default function PrivacyPage() {
           </p>
           <p className="mt-4">
             Information you share with us through this website — such as your name,
-            email address, or the contents of a contact, prayer, or newsletter request
-            — is used only to respond to you and, where you have asked, to keep you
+            email address, or the contents of a contact or newsletter request — is
+            used only to respond to you and, where you have asked, to keep you
             informed about ADK LAMP. We do not sell your information.
-          </p>
-          <p className="mt-4">
-            Prayer and spiritual-support requests are treated with particular care and
-            discretion.
           </p>
           <p className="mt-4">
             If you have questions about this policy, please contact us at{" "}
