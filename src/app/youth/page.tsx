@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { ButtonLink } from "@/components/button-link";
 import { PageHero } from "@/components/page-hero";
 import { PhotoFrame } from "@/components/photo-frame";
-import { PhotoPlaceholder } from "@/components/photo-placeholder";
 import { Eyebrow, Section, SectionHeading } from "@/components/section";
 
 export const metadata: Metadata = {
@@ -135,7 +134,11 @@ export default function YouthPage() {
               </ButtonLink>
             </div>
           </div>
-          <PhotoPlaceholder label="Community partnership gathering" rounded />
+          <PhotoFrame
+            src="/images/youth-community-gathering.jpg"
+            alt="A community meditation gathering outdoors"
+            rounded
+          />
         </div>
       </Section>
     </>
