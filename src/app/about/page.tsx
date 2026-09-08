@@ -11,12 +11,18 @@ export const metadata: Metadata = {
 };
 
 const FOUNDING_MEMBERS = [
-  "Nick Simon",
-  "Nate Trachte",
-  "Alex Morton",
-  "Wynde Kate",
-  "Sarah Workneh",
+  {
+    name: "Nick Simon",
+    bio: "Nick grew up in Westchester, New York and currently bases in Boulder, Colorado. He has been an avid traveler, entrepreneur, and meditation practitioner for the last 13 years. Currently, Nick works as a filmmaker and producer for his non-profit, Art of Mastery — an initiative to support artists, artisans, and masters around the world. He is also in school for counseling, with the hopes of bringing mindfulness and nature into therapeutic relationships. He is a student of Soto Zen Buddhism and aspires to bring this influence into his work.",
+  },
+  { name: "Nate Trachte" },
+  { name: "Alex Morton" },
+  { name: "Wynde Kate" },
+  { name: "Sarah Workneh" },
 ];
+
+const MEMBERS_WITH_BIO = FOUNDING_MEMBERS.filter((m) => m.bio);
+const MEMBERS_WITHOUT_BIO = FOUNDING_MEMBERS.filter((m) => !m.bio);
 
 const PHASES = [
   {
@@ -315,12 +321,27 @@ export default function AboutPage() {
         <SectionHeading>Building ADK LAMP together</SectionHeading>
         <p className="mt-6 max-w-2xl font-body leading-relaxed text-ink/85">
           ADK LAMP is being built with the help of a small circle of founding
-          members. Full bios are coming soon.
+          members.
         </p>
+
+        <div className="mt-10 flex flex-col gap-10">
+          {MEMBERS_WITH_BIO.map((member) => (
+            <div key={member.name} className="border-l-2 border-maroon pl-5">
+              <p className="font-display text-xl text-navy">{member.name}</p>
+              <p className="mb-3 font-body text-sm uppercase tracking-[0.15em] text-maroon">
+                Founding Member
+              </p>
+              <p className="max-w-2xl font-body leading-relaxed text-ink/80">
+                {member.bio}
+              </p>
+            </div>
+          ))}
+        </div>
+
         <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-3">
-          {FOUNDING_MEMBERS.map((name) => (
-            <div key={name} className="border-l-2 border-maroon pl-4">
-              <p className="font-display text-lg text-navy">{name}</p>
+          {MEMBERS_WITHOUT_BIO.map((member) => (
+            <div key={member.name} className="border-l-2 border-maroon pl-4">
+              <p className="font-display text-lg text-navy">{member.name}</p>
               <p className="font-body text-sm text-ink/60">Founding Member</p>
             </div>
           ))}
