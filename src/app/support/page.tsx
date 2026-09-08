@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ButtonLink } from "@/components/button-link";
 import { PageHero } from "@/components/page-hero";
 import { Section } from "@/components/section";
 
@@ -73,15 +74,17 @@ export default function SupportPage() {
             >
               Donate with PayPal
             </span>
-            <span
-              className="inline-flex cursor-not-allowed items-center justify-center gap-2 rounded-sm border border-cream/50 px-6 py-3 text-sm uppercase tracking-[0.08em] text-cream/60"
-              title="Venmo link to be added"
+            <ButtonLink
+              href="https://venmo.com/davis-trachte"
+              external
+              className="!border-cream !text-cream hover:!bg-cream hover:!text-maroon"
+              variant="ghost"
             >
               Donate with Venmo
-            </span>
+            </ButtonLink>
           </div>
           <p className="mt-4 font-body text-xs text-cream/60">
-            PayPal &amp; Venmo links are not yet connected — see the project README.
+            PayPal link is not yet connected — see the project README.
           </p>
         </div>
       </Section>

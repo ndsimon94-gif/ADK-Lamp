@@ -46,30 +46,35 @@ defined as CSS variables in `src/app/globals.css`:
 | `--color-cream` | `#f4ecdc` | page background |
 | `--color-cream-alt` | `#ebdfc4` | alternating section background |
 
-Fonts: **Playfair Display** for headings, **Lora** for body copy (loaded via
+Fonts: **Playfair Display** for headings, **Lora** for body copy, and
+**Noto Serif Tibetan** for the syllable in the logo (all loaded via
 `next/font/google` in `src/app/layout.tsx`).
 
 ## Known placeholders — needs your input before launch
 
-This was built without access to the actual logo/photo image files (they
-were shared as pasted images in chat, not as files), so a few things are
+This was built without direct file access to the logo/photos (they were
+shared as pasted images in chat, not as files), so a few things are
 stand-ins:
 
-1. **Logo** — `src/components/logo-mark.tsx` is a simple heart + flame SVG
-   in the brand colors, echoing the real logo. It does **not** attempt to
-   reproduce the Tibetan syllable from the actual mark. Swap in the real
-   logo file (ideally an SVG) and update `LogoMark` usages (header, footer,
-   photo placeholders) — or drop a `logo.svg`/`logo.png` into `public/` and
-   replace the `<LogoMark />` component calls with an `<Image>`.
+1. **Logo** — `src/components/logo-mark.tsx` recreates the heart + flame +
+   rays mark as an SVG in the brand colors, with the Tibetan seed syllable
+   ཨ (a) rendered as real text in the Noto Serif Tibetan font (not a
+   hand-traced glyph), so the character itself is accurate. The heart,
+   flame, and ray *illustration* are a close hand-drawn approximation of
+   the reference logo, not a pixel-exact trace. If you have the original
+   vector/logo file, swap it in: drop `logo.svg` into `public/` and replace
+   the `<LogoMark />` usages (header, footer, photo placeholders) with an
+   `<Image>`.
 2. **Photos** — every photo slot on the site (`<PhotoPlaceholder />`) is a
    textured placeholder panel, not a real image. Replace these with actual
    photos of Davis, the Adirondacks, gatherings, etc. by dropping files into
    `public/images/` and swapping `<PhotoPlaceholder label="..." />` for
    `<Image src="/images/your-file.jpg" alt="..." fill className="object-cover" />`
    in each page.
-3. **PayPal / Venmo donation links** — the buttons on `/support` are
-   disabled placeholders. Add the real PayPal.me / Venmo links in
-   `src/app/support/page.tsx` (search for "to be added").
+3. **Donation links** — Venmo is live on `/support`
+   (`https://venmo.com/davis-trachte`). PayPal is still a disabled
+   placeholder — add the real PayPal.me link in `src/app/support/page.tsx`
+   (search for "to be added").
 4. **Contact & newsletter forms** — since there's no backend configured,
    both forms (`src/components/contact-form.tsx`,
    `src/components/newsletter-form.tsx`) currently open the visitor's email

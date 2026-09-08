@@ -4,9 +4,10 @@ type LogoMarkProps = {
 };
 
 /**
- * Placeholder mark: heart outline with a rising flame and radiating lines,
- * echoing ADK LAMP's brand. Swap for the organization's actual logo file
- * (see README) once available.
+ * Heart, flame, and radiating rays, with the Tibetan syllable ཨ (a) set in
+ * the heart's center using an actual Tibetan typeface (see the
+ * Noto_Serif_Tibetan font in layout.tsx) rather than a hand-traced glyph,
+ * so the character itself renders correctly.
  */
 export function LogoMark({ className, color = "currentColor" }: LogoMarkProps) {
   return (
@@ -21,19 +22,38 @@ export function LogoMark({ className, color = "currentColor" }: LogoMarkProps) {
       aria-hidden="true"
     >
       {/* radiating rays */}
-      <g strokeWidth="1.75">
-        <path d="M50 4v8" />
-        <path d="M28 10l4 7" />
-        <path d="M72 10l-4 7" />
-        <path d="M14 24l6 5" />
-        <path d="M86 24l-6 5" />
-        <path d="M8 42h8" />
-        <path d="M92 42h-8" />
+      <g strokeWidth="1.6">
+        <path d="M27 8l4.5 6.5" />
+        <path d="M73 8l-4.5 6.5" />
+        <path d="M13 21l6 4.5" />
+        <path d="M87 21l-6 4.5" />
+        <path d="M6 39h8" />
+        <path d="M94 39h-8" />
       </g>
+
       {/* flame */}
-      <path d="M50 20c3.5 5 6 8.7 6 13.2 0 3.7-2.7 6.3-6 6.3s-6-2.6-6-6.3C44 28.7 46.5 25 50 20z" />
+      <path
+        d="M50,3 C55,9 59,14 55,20 C53,23 49,23 47,21 C43,17 42,11 45,7 C47,4 49,3 50,3 Z"
+        fill={color}
+        stroke="none"
+      />
+
       {/* heart */}
-      <path d="M50 84C32 71 16 58.5 16 42.5 16 31 24.5 23 34.5 23c6.7 0 12.3 3.6 15.5 9.6C53.2 26.6 58.8 23 65.5 23 75.5 23 84 31 84 42.5 84 58.5 68 71 50 84z" />
+      <path d="M50,90 C50,90 15,61 15,36 C15,19 29,11 41,18 C46,21 49,26 50,32 C51,26 54,21 59,18 C71,11 85,19 85,36 C85,61 50,90 50,90 Z" />
+
+      {/* Tibetan seed syllable, a */}
+      <text
+        x="50"
+        y="60"
+        textAnchor="middle"
+        dominantBaseline="middle"
+        stroke="none"
+        fill={color}
+        fontSize="30"
+        style={{ fontFamily: "var(--font-tibetan), serif" }}
+      >
+        {"ཨ"}
+      </text>
     </svg>
   );
 }
