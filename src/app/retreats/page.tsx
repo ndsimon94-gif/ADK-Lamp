@@ -20,17 +20,24 @@ export default function RetreatsPage() {
       />
 
       <Section>
-        <div className="mx-auto max-w-2xl">
-          <p className="font-body leading-relaxed text-ink/85">
-            Helping make meaningful retreat more accessible is one of the central
-            long-term purposes of ADK LAMP.
-          </p>
-          <p className="mt-4 font-body leading-relaxed text-ink/85">
-            Our vision includes opportunities for people rooted in established
-            religious traditions, people engaged in contemplative practice without a
-            religious affiliation, and groups seeking a sincere environment for
-            retreat.
-          </p>
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p className="font-body leading-relaxed text-ink/85">
+              Helping make meaningful retreat more accessible is one of the central
+              long-term purposes of ADK LAMP.
+            </p>
+            <p className="mt-4 font-body leading-relaxed text-ink/85">
+              Our vision includes opportunities for people rooted in established
+              religious traditions, people engaged in contemplative practice
+              without a religious affiliation, and groups seeking a sincere
+              environment for retreat.
+            </p>
+          </div>
+          <PhotoFrame
+            src="/images/retreats-nature.jpg"
+            alt="A peace pagoda on a hillside beneath a blue sky"
+            rounded
+          />
         </div>
       </Section>
 

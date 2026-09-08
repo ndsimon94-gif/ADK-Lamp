@@ -55,7 +55,11 @@ export default function YouthPage() {
               ))}
             </ul>
           </div>
-          <PhotoPlaceholder label="Youth walking a forest trail" rounded />
+          <PhotoFrame
+            src="/images/youth-meditation.jpg"
+            alt="A group of children practicing seated meditation on mats"
+            rounded
+          />
         </div>
       </Section>
 
