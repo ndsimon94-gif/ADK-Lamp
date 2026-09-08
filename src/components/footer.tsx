@@ -11,9 +11,7 @@ export function Footer() {
         <div className="flex flex-col gap-10 sm:flex-row sm:justify-between">
           <div className="max-w-sm">
             <div className="mb-4 flex items-center gap-3">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-cream p-1">
-                <Image src="/logo.png" alt="ADK LAMP" width={72} height={67} className="h-full w-auto rounded-full" />
-              </span>
+              <Image src="/logo.png" alt="ADK LAMP" width={413} height={364} className="h-14 w-auto shrink-0" />
               <span className="font-display text-lg">ADK LAMP</span>
             </div>
             <p className="font-body text-sm leading-relaxed text-cream/75">

@@ -12,7 +12,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-maroon/10 bg-cream/95 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3">
         <Link
           href="/"
           className="flex items-center gap-3 font-display text-lg text-navy"
@@ -21,9 +21,9 @@ export function Header() {
           <Image
             src="/logo.png"
             alt="ADK LAMP"
-            width={72}
-            height={67}
-            className="h-9 w-auto shrink-0 rounded-md"
+            width={413}
+            height={364}
+            className="h-16 w-auto shrink-0"
             priority
           />
           <span className="leading-tight tracking-[0.02em]">
