@@ -47,6 +47,38 @@ export default function GatherPage() {
       />
 
       <Section>
+        <Eyebrow>Upcoming Events</Eyebrow>
+        <SectionHeading>Join us</SectionHeading>
+        <p className="mt-6 max-w-2xl font-body leading-relaxed text-ink/85">
+          Every ADK LAMP event is donation-based — give what you can, or nothing
+          at all. All are welcome, and there is never a cost barrier to joining.
+        </p>
+        <div className="mt-10 flex flex-col gap-8">
+          {EVENTS.map((event) => (
+            <div key={event.title} className="border border-maroon/15 bg-cream p-8">
+              <h3 className="font-display text-2xl text-navy">{event.title}</h3>
+              <p className="mt-1 font-body italic text-ink/70">{event.subtitle}</p>
+              <p className="mt-3 font-body text-sm text-ink/85">{event.teacher}</p>
+              <p className="mt-4 font-body text-sm uppercase tracking-[0.1em] text-maroon">
+                {event.date} · {event.time}
+              </p>
+              <p className="mt-1 font-body text-sm text-ink/70">{event.location}</p>
+              <p className="mt-4 font-body leading-relaxed text-ink/85">
+                {event.description}
+              </p>
+              <p className="mt-4 font-body leading-relaxed text-ink/85">{event.cost}</p>
+              <p className="mt-2 font-body text-sm italic text-ink/60">{event.note}</p>
+              <div className="mt-6">
+                <ButtonLink href="/contact?reason=Event" variant="secondary">
+                  Contact Us About This Event
+                </ButtonLink>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section tone="alt">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="font-body leading-relaxed text-ink/85">
@@ -76,38 +108,6 @@ export default function GatherPage() {
             alt="A teacher and community members gathered on a hillside"
             rounded
           />
-        </div>
-      </Section>
-
-      <Section tone="alt">
-        <Eyebrow>Upcoming Events</Eyebrow>
-        <SectionHeading>Join us</SectionHeading>
-        <p className="mt-6 max-w-2xl font-body leading-relaxed text-ink/85">
-          Every ADK LAMP event is donation-based — give what you can, or nothing
-          at all. All are welcome, and there is never a cost barrier to joining.
-        </p>
-        <div className="mt-10 flex flex-col gap-8">
-          {EVENTS.map((event) => (
-            <div key={event.title} className="border border-maroon/15 bg-cream p-8">
-              <h3 className="font-display text-2xl text-navy">{event.title}</h3>
-              <p className="mt-1 font-body italic text-ink/70">{event.subtitle}</p>
-              <p className="mt-3 font-body text-sm text-ink/85">{event.teacher}</p>
-              <p className="mt-4 font-body text-sm uppercase tracking-[0.1em] text-maroon">
-                {event.date} · {event.time}
-              </p>
-              <p className="mt-1 font-body text-sm text-ink/70">{event.location}</p>
-              <p className="mt-4 font-body leading-relaxed text-ink/85">
-                {event.description}
-              </p>
-              <p className="mt-4 font-body leading-relaxed text-ink/85">{event.cost}</p>
-              <p className="mt-2 font-body text-sm italic text-ink/60">{event.note}</p>
-              <div className="mt-6">
-                <ButtonLink href="/contact?reason=Event" variant="secondary">
-                  Contact Us About This Event
-                </ButtonLink>
-              </div>
-            </div>
-          ))}
         </div>
       </Section>
 
