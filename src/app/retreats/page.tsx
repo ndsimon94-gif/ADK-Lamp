@@ -34,8 +34,8 @@ export default function RetreatsPage() {
             </p>
           </div>
           <PhotoFrame
-            src="/images/retreats-nature.jpg"
-            alt="A peace pagoda on a hillside beneath a blue sky"
+            src="/images/retreats-mountain-view.jpg"
+            alt="An Adirondack mountain seen from a forested overlook"
             rounded
           />
         </div>

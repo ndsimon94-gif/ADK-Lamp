@@ -198,8 +198,8 @@ export default function Home() {
       <Section>
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <PhotoFrame
-            src="/images/gather-ceremony.jpg"
-            alt="Davis leading an outdoor ceremony in a mountain clearing"
+            src="/images/davis-coaching-portrait.jpg"
+            alt="Davis Trachte smiling outdoors beside a forest river"
             aspect="aspect-[4/5]"
             rounded
             className="lg:order-2"

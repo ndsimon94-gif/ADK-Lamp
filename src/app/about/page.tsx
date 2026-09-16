@@ -12,12 +12,28 @@ export const metadata: Metadata = {
 
 const FOUNDING_MEMBERS = [
   {
-    name: "Nick Simon",
-    bio: "Nick grew up in Westchester, New York and currently bases in Boulder, Colorado. He has been an avid traveler, entrepreneur, and meditation practitioner for the last 13 years. Currently, Nick works as a filmmaker and producer for his non-profit, Art of Mastery — an initiative to support artists, artisans, and masters around the world. He is also in school for counseling, with the hopes of bringing mindfulness and nature into therapeutic relationships. He is a student of Soto Zen Buddhism and aspires to bring this influence into his work.",
+    name: "Nicole Goldsmid",
+    role: "Community Director",
+    bio: [
+      "Nicole’s path of Dharma began at Naropa University, where she studied Buddhism, yoga and psychology and first encountered the transformative power of loving kindness meditation. She is a student of Garchen Rinpoche and Lama Tashi Topgyal and has been a meditation practitioner since 2011.",
+      "Alongside her study and practice of the Buddha Dharma, Nicole has pursued a deep interest in holistic health and healing, becoming a Nutritional Therapy Practitioner in 2025. She is passionate about meeting and supporting people right where they are; body, mind, and heart. She loves helping others discover greater connection, vitality, and well-being in their own lives.",
+      "As Community Director, Nicole is especially passionate about cultivating spaces where people feel genuinely welcomed, respected, and connected. She believes that every person deserves to be met with dignity, compassion, and an appreciation for their innate goodness and potential. She is inspired by the richness of diverse spiritual traditions and is committed to fostering an inclusive community where people can learn from one another, form meaningful connections, and feel at home.",
+      "A California native, Nicole has a deep love for the ocean and the natural world and regards nature as one of our greatest sources of wisdom, inspiration, and healing.",
+    ],
   },
-  { name: "Nate Trachte" },
+  {
+    name: "Nick Simon",
+    role: "Technical Support",
+    bio: [
+      "Nick grew up in Westchester, New York and currently bases in Boulder, Colorado. He has been an avid traveler, entrepreneur, and meditation practitioner for the last 13 years. Currently, Nick works as a filmmaker and producer for his non-profit, Art of Mastery — an initiative to support artists, artisans, and masters around the world. He is also in school for counseling, with the hopes of bringing mindfulness and nature into therapeutic relationships. He is a student of Soto Zen Buddhism and aspires to bring this influence into his work.",
+    ],
+  },
+  { name: "Brooke McNamara", role: "Director of Spiritual and Community Oversight" },
+  { name: "Nate Trachte", role: "Youth Program Director" },
   { name: "Alex Morton" },
   { name: "Wynde Kate" },
+  { name: "Eleri" },
+  { name: "Yasha Wagner" },
 ];
 
 const MEMBERS_WITH_BIO = FOUNDING_MEMBERS.filter((m) => m.bio);
@@ -328,11 +344,18 @@ export default function AboutPage() {
             <div key={member.name} className="border-l-2 border-maroon pl-5">
               <p className="font-display text-xl text-navy">{member.name}</p>
               <p className="mb-3 font-body text-sm uppercase tracking-[0.15em] text-maroon">
-                Founding Member
+                {member.role ?? "Founding Member"}
               </p>
-              <p className="max-w-2xl font-body leading-relaxed text-ink/80">
-                {member.bio}
-              </p>
+              <div className="max-w-2xl">
+                {member.bio?.map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className="mt-4 font-body leading-relaxed text-ink/80 first:mt-0"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
           ))}
         </div>
@@ -341,7 +364,9 @@ export default function AboutPage() {
           {MEMBERS_WITHOUT_BIO.map((member) => (
             <div key={member.name} className="border-l-2 border-maroon pl-4">
               <p className="font-display text-lg text-navy">{member.name}</p>
-              <p className="font-body text-sm text-ink/60">Founding Member</p>
+              <p className="font-body text-sm text-ink/60">
+                {member.role ?? "Founding Member"}
+              </p>
             </div>
           ))}
         </div>
