@@ -52,11 +52,6 @@ const PHASES = [
   },
   {
     number: "03",
-    name: "Tibetan Practice Space",
-    body: "We envision a separate Tibetan Buddhist shrine and practice building dedicated to traditional practice. Having distinct spaces will allow ADK LAMP to maintain a genuinely non-denominational common sanctuary while also providing an appropriate environment for preserving a particular spiritual tradition. Openness does not require erasing tradition, and tradition does not require excluding others.",
-  },
-  {
-    number: "04",
     name: "Simple Retreat Cabins",
     body: "We hope to establish a small number of simple cabins for solitary meditation, prayer, contemplation, and traditional retreat. These will not be luxury accommodations. Their purpose will be practice.",
   },
