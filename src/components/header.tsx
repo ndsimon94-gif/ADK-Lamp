@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { NAV_LINKS, SITE_SHORT } from "@/lib/nav";
+import { SocialLinks } from "@/components/social-links";
 
 export function Header() {
   const pathname = usePathname();
@@ -44,6 +45,7 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+          <SocialLinks className="text-navy" />
           <Link
             href="/support"
             className="rounded-sm border border-maroon px-4 py-2 text-sm tracking-[0.04em] text-maroon transition-colors hover:bg-maroon hover:text-cream"
@@ -90,6 +92,7 @@ export function Header() {
           >
             Donate
           </Link>
+          <SocialLinks className="mt-4 justify-center text-navy" />
           <span className="mt-2 text-center text-xs text-navy/50">{SITE_SHORT}</span>
         </nav>
       )}

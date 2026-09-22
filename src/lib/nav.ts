@@ -12,3 +12,8 @@ export const SITE_SHORT = "ADK LAMP";
 export const CONTACT_EMAIL = "dtrachtensa@gmail.com";
 export const CONTACT_PHONE_DISPLAY = "845-926-0271";
 export const CONTACT_PHONE_TEL = "+18459260271";
+
+export const SOCIAL_LINKS = {
+  instagram: "https://www.instagram.com/adk_lamp?stkn=bG80cjNzMWpldTVo",
+  facebook: "https://www.facebook.com/share/1DbXHtkfko/?mibextid=wwXIfr",
+} as const;

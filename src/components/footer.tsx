@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, NAV_LINKS } from "@/lib/nav";
+import { SocialLinks } from "@/components/social-links";
 
 const FOOTER_LINKS = [{ href: "/", label: "Home" }, ...NAV_LINKS, { href: "/support", label: "Donate" }];
 
@@ -52,6 +53,7 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
+            <SocialLinks className="mt-4 text-cream/85" />
           </div>
         </div>
 
