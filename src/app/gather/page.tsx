@@ -35,6 +35,13 @@ const EVENTS = [
       "Free, donation-based. Give what you can. All proceeds will support Davis's three-year intensive Dharma training retreat, which he hopes to begin in November 2026 and complete in 2030.",
     note: "Please bring your own comfortable cushion or chair.",
   },
+  {
+    title: "Exploring the Sacred Feminine in Tibetan Buddhism",
+    teacher: "Led by Davis Trachte",
+    date: "Sunday, November 1",
+    time: "3:00 PM",
+    location: "The Barkeater",
+  },
 ];
 
 export default function GatherPage() {
@@ -57,17 +64,25 @@ export default function GatherPage() {
           {EVENTS.map((event) => (
             <div key={event.title} className="border border-maroon/15 bg-cream p-8">
               <h3 className="font-display text-2xl text-navy">{event.title}</h3>
-              <p className="mt-1 font-body italic text-ink/70">{event.subtitle}</p>
+              {event.subtitle && (
+                <p className="mt-1 font-body italic text-ink/70">{event.subtitle}</p>
+              )}
               <p className="mt-3 font-body text-sm text-ink/85">{event.teacher}</p>
               <p className="mt-4 font-body text-sm uppercase tracking-[0.1em] text-maroon">
                 {event.date} · {event.time}
               </p>
               <p className="mt-1 font-body text-sm text-ink/70">{event.location}</p>
-              <p className="mt-4 font-body leading-relaxed text-ink/85">
-                {event.description}
-              </p>
-              <p className="mt-4 font-body leading-relaxed text-ink/85">{event.cost}</p>
-              <p className="mt-2 font-body text-sm italic text-ink/60">{event.note}</p>
+              {event.description && (
+                <p className="mt-4 font-body leading-relaxed text-ink/85">
+                  {event.description}
+                </p>
+              )}
+              {event.cost && (
+                <p className="mt-4 font-body leading-relaxed text-ink/85">{event.cost}</p>
+              )}
+              {event.note && (
+                <p className="mt-2 font-body text-sm italic text-ink/60">{event.note}</p>
+              )}
               <div className="mt-6">
                 <ButtonLink href="/contact?reason=Event" variant="secondary">
                   Contact Us About This Event
