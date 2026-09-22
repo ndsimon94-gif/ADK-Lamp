@@ -39,6 +39,14 @@ const FOUNDING_MEMBERS = [
 const MEMBERS_WITH_BIO = FOUNDING_MEMBERS.filter((m) => m.bio);
 const MEMBERS_WITHOUT_BIO = FOUNDING_MEMBERS.filter((m) => !m.bio);
 
+const BOARD_OF_TRUSTEES = [
+  "Davis Trachte",
+  "Sudhama",
+  "Tharesa Lindsay",
+  "Alex Mcdonald",
+  "Stephen Merganthawler",
+];
+
 const PHASES = [
   {
     number: "01",
@@ -362,6 +370,19 @@ export default function AboutPage() {
               <p className="font-body text-sm text-ink/60">
                 {member.role ?? "Founding Member"}
               </p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Board of trustees */}
+      <Section tone="alt">
+        <Eyebrow>Board of Trustees</Eyebrow>
+        <SectionHeading>Guiding ADK LAMP&rsquo;s future</SectionHeading>
+        <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-3">
+          {BOARD_OF_TRUSTEES.map((name) => (
+            <div key={name} className="border-l-2 border-maroon pl-4">
+              <p className="font-display text-lg text-navy">{name}</p>
             </div>
           ))}
         </div>
