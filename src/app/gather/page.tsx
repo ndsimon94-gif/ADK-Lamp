@@ -49,6 +49,12 @@ const EVENTS = [
       "Join us for a Dharma talk exploring the life, teachings, and enduring relevance of Machik Labdrön and the sacred feminine in Tibetan Buddhism. We will look at how her wisdom, compassion, and fearless example can inspire our practice and daily lives.",
     note: "All are welcome.",
   },
+  {
+    title: "ADK LAMP Launch Party",
+    date: "Sunday, November 1",
+    time: "7:00 – 9:30 PM",
+    location: "Location TBD, Adirondacks — a Zoom option will also be available.",
+  },
 ];
 
 export default function GatherPage() {
@@ -96,7 +102,9 @@ export default function GatherPage() {
                 {event.tagline && (
                   <p className="mt-2 font-body text-sm text-maroon">{event.tagline}</p>
                 )}
-                <p className="mt-3 font-body text-sm text-ink/85">{event.teacher}</p>
+                {event.teacher && (
+                  <p className="mt-3 font-body text-sm text-ink/85">{event.teacher}</p>
+                )}
                 <p className="mt-4 font-body text-sm uppercase tracking-[0.1em] text-maroon">
                   {event.date} · {event.time}
                 </p>
@@ -240,7 +248,7 @@ export default function GatherPage() {
           <p className="mb-3 font-body text-sm uppercase tracking-[0.2em] text-cream/80">
             Individual Coaching
           </p>
-          <h2 className="font-display text-3xl sm:text-4xl">Work One-on-One With Davis</h2>
+          <h2 className="font-display text-3xl sm:text-4xl">Work One-on-One With Our Team</h2>
           <p className="mt-6 font-body leading-relaxed text-cream/90">
             Davis separately offers individual Dharma and life coaching for people
             seeking more personalized support with contemplative practice, spiritual

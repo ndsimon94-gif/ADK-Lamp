@@ -33,19 +33,41 @@ const FOUNDING_MEMBERS = [
   { name: "Alex Morton" },
   { name: "Wynde Kate" },
   { name: "Eleri" },
-  { name: "Yasha Wagner" },
+  {
+    name: "Yasha S. Wagner, PhD",
+    bio: [
+      "Dr. Yasha S. Wagner is a researcher, educator, and innovator in the field of psychology, community organizer, and Founder/President of the InterWorld Institute, a 501(c)3 nonprofit for Inner World Peace whose past ‘Worldchangers’ initiatives have included HeartFire Festival events, Sanctorum Ecovillage centers, and more. InterWorld is now focused on developing a hybrid holistic academy offering interdisciplinary programs at its 40-acre center in Colorado and other locations worldwide.",
+      "Yasha is also an initiate of world spiritual traditions and a Murshid with the Inayati-Maimuni Order, authorized to facilitate spiritual practices and retreats. As a multilingual polymath and emcee, he has traveled around the world since early childhood, studying and sharing diverse cultural traditions and arts.",
+    ],
+  },
 ];
 
 const MEMBERS_WITH_BIO = FOUNDING_MEMBERS.filter((m) => m.bio);
 const MEMBERS_WITHOUT_BIO = FOUNDING_MEMBERS.filter((m) => !m.bio);
 
 const BOARD_OF_TRUSTEES = [
-  "Davis Trachte",
-  "Sudhama",
-  "Tharesa Lindsay",
-  "Alex Mcdonald",
-  "Stephen Merganthawler",
+  {
+    name: "Kent C. Trachte, Ph.D.",
+    role: "President",
+    bio: [
+      "Kent C. Trachte, Ph.D., serves as President of the Adirondack Loving Awareness Meditation Project (ADK LAMP), bringing more than four decades of experience in higher education, institutional leadership, governance, and community service.",
+      "He served as the 15th President of Lycoming College from 2013 until his retirement in 2025. During his nearly twelve-year tenure, he guided significant institutional growth, including approximately $65 million in campus investments, expanded academic and experiential-learning opportunities, and initiatives advancing college access and social mobility.",
+      "Previously, Dr. Trachte spent 25 years at Franklin & Marshall College in leadership roles including Associate Provost and Dean for Educational Services and Dean of the College. Earlier, he taught political science at Gettysburg College, Long Island University, and Clark University.",
+      "Dr. Trachte earned degrees from Dartmouth College, the University of Kentucky, and Binghamton University, including a Ph.D. in Political Science. At ADK LAMP, he applies his leadership and organizational experience to advance a sustainable, mission-driven organization dedicated to loving awareness, contemplative practice, community, and compassionate service in the Adirondacks.",
+    ],
+  },
+  { name: "Ashish Kothari" },
+  { name: "Sudhama" },
+  { name: "Tharesa Lindsay" },
+  { name: "Alex Mcdonald" },
+  { name: "Dan Curtiss" },
+  { name: "Alan Mcoy" },
+  { name: "Gretchen Mills", role: "Vice President" },
+  { name: "Carly Domic Sobol" },
 ];
+
+const BOARD_WITH_BIO = BOARD_OF_TRUSTEES.filter((m) => m.bio);
+const BOARD_WITHOUT_BIO = BOARD_OF_TRUSTEES.filter((m) => !m.bio);
 
 const PHASES = [
   {
@@ -379,10 +401,35 @@ export default function AboutPage() {
       <Section tone="alt">
         <Eyebrow>Board of Trustees</Eyebrow>
         <SectionHeading>Guiding ADK LAMP&rsquo;s future</SectionHeading>
+
+        <div className="mt-10 flex flex-col gap-10">
+          {BOARD_WITH_BIO.map((member) => (
+            <div key={member.name} className="border-l-2 border-maroon pl-5">
+              <p className="font-display text-xl text-navy">{member.name}</p>
+              <p className="mb-3 font-body text-sm uppercase tracking-[0.15em] text-maroon">
+                {member.role ?? "Board Member"}
+              </p>
+              <div className="max-w-2xl">
+                {member.bio?.map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className="mt-4 font-body leading-relaxed text-ink/80 first:mt-0"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
         <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-3">
-          {BOARD_OF_TRUSTEES.map((name) => (
-            <div key={name} className="border-l-2 border-maroon pl-4">
-              <p className="font-display text-lg text-navy">{name}</p>
+          {BOARD_WITHOUT_BIO.map((member) => (
+            <div key={member.name} className="border-l-2 border-maroon pl-4">
+              <p className="font-display text-lg text-navy">{member.name}</p>
+              {member.role && (
+                <p className="font-body text-sm text-ink/60">{member.role}</p>
+              )}
             </div>
           ))}
         </div>

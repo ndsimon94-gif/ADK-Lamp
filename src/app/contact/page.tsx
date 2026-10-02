@@ -40,7 +40,7 @@ export default function ContactPage() {
 
             <div className="mt-10 border-t border-maroon/15 pt-8">
               <h3 className="font-display text-xl text-navy">
-                Work One-on-One With Davis
+                Work One-on-One With Our Team
               </h3>
               <p className="mt-3 font-body text-sm leading-relaxed text-ink/80">
                 For inquiries about Davis&rsquo;s separate Dharma and life-coaching

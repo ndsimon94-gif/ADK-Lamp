@@ -6,7 +6,7 @@ import { Section } from "@/components/section";
 import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL } from "@/lib/nav";
 
 export const metadata: Metadata = {
-  title: "Work with Davis",
+  title: "Work with Our Team",
   description:
     "Individual Dharma and life coaching with Davis Trachte — personalized support for contemplative practice, spiritual development, and life direction.",
 };
@@ -16,7 +16,7 @@ export default function CoachingPage() {
     <>
       <PageHero
         eyebrow="Individual Coaching"
-        title="Work One-on-One With Davis"
+        title="Work One-on-One With Our Team"
         description="Personalized support for contemplative practice, spiritual development, life direction, and integrating practice with everyday life."
       />
 

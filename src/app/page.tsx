@@ -206,7 +206,7 @@ export default function Home() {
           />
           <div className="lg:order-1">
             <Eyebrow>Individual Coaching</Eyebrow>
-            <SectionHeading>Work One-on-One With Davis</SectionHeading>
+            <SectionHeading>Work One-on-One With Our Team</SectionHeading>
             <p className="mt-6 font-body leading-relaxed text-ink/85">
               Davis separately offers individual Dharma and life coaching for people
               seeking more personalized support with contemplative practice,
