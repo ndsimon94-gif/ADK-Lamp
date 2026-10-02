@@ -170,8 +170,8 @@ export default function AboutPage() {
             </p>
           </div>
           <PhotoFrame
-            src="/images/home-welcome-beach.jpg"
-            alt="Davis Trachte and his teacher smiling on a lakeshore"
+            src="/images/davis-and-mother.jpg"
+            alt="Davis Trachte and his mother smiling together"
             rounded
           />
         </div>
